@@ -1,0 +1,20 @@
+CREATE TABLE usuario(
+id serial primary key,
+nome varchar(255) NOT NULL,
+email varchar(255) NOT NULL
+)
+
+CREATE TABLE tarefas(
+id serial primary key,
+id_usuario serial,
+desc_tarefa varchar(255) NOT NULL,
+nome_setor varchar(255) NOT NULL,
+prioridade VARCHAR(255) NOT NULL ,
+data_cadastro date not null, 
+status VARCHAR(255) NOT NULL DEFAULT 'a fazer',
+CHECK (prioridade IN('baixa','media','alta')),
+CHECK (status IN('a fazer','fazendo','pronto'))
+	)
+	
+	
+	
