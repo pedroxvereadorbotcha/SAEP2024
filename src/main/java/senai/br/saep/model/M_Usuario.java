@@ -1,20 +1,10 @@
 package senai.br.saep.model;
 
-import jakarta.persistence.Entity;
-
-
-@Entity
 public class M_Usuario {
 
     private String nome;
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    private String email;
 
     public String getEmail() {
         return email;
@@ -24,10 +14,13 @@ public class M_Usuario {
         this.email = email;
     }
 
-    private String email;
+    public String getNome(String nome) {
+        return this.nome;
+    }
 
-
-
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
 
 }
